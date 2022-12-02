@@ -1,0 +1,32 @@
+example 1:
+
+set serveroutput on;
+declare
+type dept_re is record(d_id number(4) not null:=10,
+dept_name varchar2(20):='ACCOUNTING',
+loc_id number(4):=1700);
+dep dept_re;
+begin
+dbms_output.put_line('dept_id is '||dep.d_id);
+dbms_output.put_line('dept_name is '||dep.dept_name);
+dbms_output.put_line('loc is '||dep.loc_id);
+end;
+
+example 2:
+
+set serveroutput on;
+declare
+type books is record(title varchar2(30),
+author varchar2(30));
+b1 books;
+b2 books;
+begin
+b1.title:='Data Structures';
+b1.author:='XYZ';
+b2.title:='Data WareHouse Mining';
+b2.author:='ABC';
+dbms_output.put_line('Book 1 title is '||b1.title);
+dbms_output.put_line('Book 1 author is '||b1.author);
+dbms_output.put_line('Book 2 title is '||b2.title);
+dbms_output.put_line('Book 2 author is '||b2.author);
+end;
